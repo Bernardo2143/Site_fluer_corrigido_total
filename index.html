@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleur de Sucre - Início</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer ></script>
+</head>
+
+<body>
+    
+     <header class="navbar">
+        <div class="nav-container">
+            
+        
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon"><div class="logoPerfil"><img src="unnamed (9).png" alt=""></div></div>
+                <div class="logo-text">
+                    <span class="brand-name">Fleur de Sucre</span>
+                    <span class="brand-sub">Haute Pâtisserie</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-btn active">Início</a>
+                <a href="produtos.html" class="nav-btn">Produtos</a>
+                <a href="pedidos.html" class="nav-btn">Meus Pedidos</a>
+                <a href="carrinho.html" class="nav-btn">Carrinho</a>
+            </nav>
+
+         
+            <div class="search-box">
+                <input type="text" id="headerSearchInput" placeholder="Buscar macarons, éclairs..." onkeyup="handleHeaderSearch(event)">
+            </div>
+
+           
+            <div class="nav-actions">
+                
+                <button onclick="toggleDarkMode()" class="theme-btn" title="Alternar Modo">
+                    <img class="moonsun" src="moon.png">
+                </button>
+
+                
+                <div id="authNavButtons" class="auth-buttons">
+                    <button onclick="openLoginModal()" class="btn btn-outline">Entrar</button>
+                    <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
+                </div>
+
+             
+                <div id="userNavProfile" class="user-profile hidden">
+                    <a href="perfil.html" title="Meu Perfil">👤</a>
+                </div>
+
+                
+                <a href="carrinho.html" class="cart-icon">
+                    <img  class="carrinhoimg" src="vista-lateral-vazia-do-carrinho-de-compras.png" alt="">
+                    <span id="cartBadge" class="badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <span class="tag">Tradition & Excellence De Paris</span>
+                    <h1>Doces que florescem em cada mordida</h1>
+                    <p>Macarons crocantes, croissants amanteigados, éclairs aveludadas e tortas clássicas feitas à mão com os melhores ingredientes da França.</p>
+
+                    <div class="hero-search">
+                        <input type="text" id="heroSearchInput" placeholder="Busque macarons, croissants, tortas...">
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="produtos.html" class="btn btn-primary">Ver Cardápio</a>
+                        <a href="cadastro.html" class="btn btn-outline">Criar Conta</a>
+                    </div>
+                </div>
+
+                <div class="hero-badge-wrap">
+                    <div class="hero-badge">
+                     <div class="logo"><img src="unnamed (9).png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            
+            <div class="features-container">
+                <div class="feature-card">
+                    <span class="num">01</span>
+                    <div>
+                        <h3>Feito à mão, todo dia</h3>
+                        <p>Produção artesanal em pequenos lotes, mantendo o frescor absoluto.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <span class="num">02</span>
+                    <div>
+                        <h3>Ingredientes Selecionados</h3>
+                        <p>Manteiga AOP, chocolates belgas e baunilha natural em fava.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <span class="num">03</span>
+                    <div>
+                        <h3>Entrega ou Retirada</h3>
+                        <p>Embalagens térmicas luxuosas prontas para presentear.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="section-header">
+                <div>
+                    <span class="tag">Especialidades</span>
+                    <h2>Nossas Categorias</h2>
+                </div>
+                <a href="produtos.html" class="link-more">Ver cardápio completo &rarr;</a>
+            </div>
+            <div class="faixa_preta_palavras_loop">  
+                <div class="loop_infinito_palavras">
+                    
+                    <div class="card_categoria_bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('unnamed\ \(5\).png');">
+                        <div class="conteudo_card">
+                            <h3>Macarons</h3>
+                            <p>Crocantes por fora, macios por dentro com recheios nobres.</p>
+                        </div>
+                    </div>
+                    <div class="card_categoria_bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('unnamed\ \(6\).png');">
+                        <div class="conteudo_card">
+                            <h3>Viennoiseries</h3>
+                            <p>Croissants e folhados bem amanteigados e folheados.</p>
+                        </div>
+                    </div>
+                    <div class="card_categoria_bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('unnamed\ \(7\).png');">
+                        <div class="conteudo_card">
+                            <h3>Éclairs</h3>
+                            <p>Recheios cremosos e glacês brilhantes feitos na hora.</p>
+                        </div>
+                    </div>
+                    <div class="card_categoria_bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('unnamed\ \(8\).png');">
+                        <div class="conteudo_card">
+                            <h3>Tortas e Bolos</h3>
+                            <p>Sobremesas sofisticadas para momentos especiais.</p>
+                        </div>
+                    </div>
+            
+                   
+                    <div class="card_categoria_bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('unnamed\ \(5\).png');">
+                        <div class="conteudo_card">
+                            <h3>Macarons</h3>
+                            <p>Crocantes por fora, macios por dentro com recheios nobres.</p>
+                        </div>
+                    </div>
+                    <div class="card_categoria_bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('unnamed\ \(6\).png');">
+                        <div class="conteudo_card">
+                            <h3>Viennoiseries</h3>
+                            <p>Croissants e folhados bem amanteigados e folheados.</p>
+                        </div>
+                    </div>
+                    <div class="card_categoria_bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('unnamed\ \(7\).png');">
+                        <div class="conteudo_card">
+                            <h3>Éclairs</h3>
+                            <p>Recheios cremosos e glacês brilhantes feitos na hora.</p>
+                        </div>
+                    </div>
+                    <div class="card_categoria_bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('U');">
+                        <div class="conteudo_card">
+                            <h3>Tortas e Bolos</h3>
+                            <p>Sobremesas sofisticadas para momentos especiais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="section-header">
+                <h2>Os Queridinhos da Casa</h2>
+                <a href="produtos.html" class="link-more">Explorar tudo</a>
+            </div>
+            <div id="featuredProductsGrid" class="products-grid">
+              
+            </div>
+            
+    
+            <div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="queridinhosCasa">
+     <div class="queridinhosCasa" >
+        <img src="images (4).jpg"  class="queridosCasa">
+        <img src="images (5).jpg" class="queridosCasa">
+        <img src="pexels-photo-33474058.avif"  class="queridosCasa">
+        <img src="images (3).jpg" class="queridosCasa">
+      </div>
+
+</div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <span class="footer-logo">Fleur de Sucre</span>
+            <p>Haute Pâtisserie Artesanal de inspiração francesa. Criando momentos inesquecíveis através do sabor.</p>
+            <p class="copyright">© 2026 Fleur de Sucre. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="loginModal" class="modal-backdrop hidden">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeLoginModal()">&times;</button>
+            <h3>Acessar Conta</h3>
+            <p>Informe seus dados para entrar.</p>
+            <form onsubmit="handleLoginSubmit(event)">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" required placeholder="voce@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="toast">
+        <span id="toastMessage">Ação realizada com sucesso!</span>
+    </div>
+
+    <div id="imageModal" class="image-modal" aria-hidden="true">
+        <div class="image-modal-backdrop"></div>
+        <div class="image-modal-content">
+          <button class="image-modal-close" aria-label="Fechar">&times;</button>
+          <div class="image-modal-img-wrap">
+            <img id="modalImage" src="" alt="">
+          </div>
+          <div class="image-modal-info">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+            <span id="modalTag" class="modal-tag"></span>
+          </div>
+        </div>
+      </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+
+</html>

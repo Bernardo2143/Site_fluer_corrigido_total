@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleur de Sucre - Produtos</title>
+    
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+    <header class="navbar">
+        <div class="nav-container">
+            
+       
+            <a href="index.html" class="brand-logo">
+                <div class="logo-icon"><div class="logoPerfil"><img src="unnamed (9).png" alt=""></div></div>
+                <div class="logo-text">
+                    <span class="brand-name">Fleur de Sucre</span>
+                    <span class="brand-sub">Haute Pâtisserie</span>
+                </div>
+            </a>
+
+          
+            <nav class="nav-links">
+                <a href="index.html" class="nav-btn">Início</a>
+                <a href="produtos.html" class="nav-btn active">Produtos</a>
+                <a href="pedidos.html" class="nav-btn">Meus Pedidos</a>
+                <a href="carrinho.html" class="nav-btn">Carrinho</a>
+            </nav>
+
+            
+            <div class="search-box">
+                <input type="text" id="headerSearchInput" placeholder="Buscar macarons, éclairs..." onkeyup="handleHeaderSearch(event)">
+            </div>
+
+            
+            <div class="nav-actions">
+                
+                <button onclick="toggleDarkMode()" class="theme-btn" title="Alternar Modo">
+                    <img class="moonsun" src="moon.png">
+                </button>
+
+               
+                <div id="authNavButtons" class="auth-buttons">
+                    <button onclick="openLoginModal()" class="btn btn-outline">Entrar</button>
+                    <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
+                </div>
+
+                
+                <div id="userNavProfile" class="user-profile hidden">
+                    <a href="perfil.html" title="Meu Perfil">👤</a>
+                </div>
+
+              
+                <a href="carrinho.html" class="cart-icon">
+                    <img  class="carrinhoimg" src="vista-lateral-vazia-do-carrinho-de-compras.png" alt="">
+                    <span id="cartBadge" class="badge">0</span>
+                </a>
+            </div>
+        </div>
+        
+    </header>
+
+    
+    <main class="page-container">
+        
+        <section class="catalog-section">
+            <div class="catalog-header">
+                <div>
+                    <span class="tag">Cardápio Exclusivo</span>
+                    <h2>Nossas Delícias</h2>
+                </div>
+
+               
+                <div class="category-filters" id="categoryFilters">
+                    <button onclick="filterByCategory('todos')" class="filter-btn active">Todos</button>
+                    <button onclick="filterByCategory('macarons')" class="filter-btn">Macarons</button>
+                    <button onclick="filterByCategory('viennoiseries')" class="filter-btn">Viennoiseries</button>
+                    <button onclick="filterByCategory('eclairs')" class="filter-btn">Éclairs</button>
+                    <button onclick="filterByCategory('tortas')" class="filter-btn">Tortas</button>
+                </div>
+            </div>
+
+            
+            <div id="productsGrid" class="products-grid">
+                
+            </div>
+            <main class="produtos-grid">
+                <div class="produto-card" data-categoria="macarons">
+                    <div class="produto-img"> <img src="dscf4191_13_168302-172813545350688.jpeg" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Macaron de Frutas Vermelhas</h3>
+                        <p class="produto-preco">R$ 8,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Macaron de Frutas Vermelhas', 8.00)">+ Adicionar</button>
+
+                    </div>
+                </div>
+        
+                <div class="produto-card" data-categoria="viennoiseries">
+                    <div class="produto-img"><img src="images (7).jpg" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Croissant Tradicional</h3>
+                        <p class="produto-preco">R$ 14,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Croissant Tradicional', 14.00)">+ Adicionar</button>
+
+                    </div>
+                </div>
+        
+                <div class="produto-card" data-categoria="eclairs">
+                    <div class="produto-img"> <img src="eclair-alpino.avif" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Éclair de Chocolate</h3>
+                        <p class="produto-preco">R$ 12,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Éclair de Chocolate', 12.00)">+ Adicionar</button>
+
+                    </div>
+                    
+                </div>
+        
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="receita-torta-limao-siciliano-merengue-duas-marias-atelier.webp" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Torta de Limão Siciliano</h3>
+                        <p class="produto-preco">R$ 16,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Torta de Limão Siciliano', 16.00)">+ Adicionar</button>
+
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="captura_de_tela_2022-10-24_a_s_16.48.56_1.png" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Éclair de Baunilha com caramelo</h3>
+                        <p class="produto-preco">R$ 18,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Éclair de Baunilha com caramelo', 18.00)">+ Adicionar</button>
+
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="images (8).jpg" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Tartelette aux Fraises</h3>
+                        <p class="produto-preco">R$ 20,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Tartelette aux Fraises', 20.00)">+ Adicionar</button>
+
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="images (1).jpg" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome"> Macaron de Framboesa e Rosas com Chocolate Branco</h3>
+                        <p class="produto-preco">R$ 14,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Macaron de Framboesa e Rosas com Chocolate Branco', 14.00)">+ Adicionar</button>
+
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="fraisier-de-morango-1.webp" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Fraiser de Morango</h3>
+                        <p class="produto-preco">R$ 25,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Fraiser de Morango', 25.00)">+ Adicionar</button>
+
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="unnamed (10).png" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Belle pâtisserie</h3>
+                        <p class="produto-preco">R$ 21,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Belle pâtisserie', 21.00)">+ Adicionar</button>
+
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="images (9).jpg" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Petit Gâteau</h3>
+                        <p class="produto-preco">R$ 30,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Petit Gâteau', 30.00)">+ Adicionar</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="unnamed (11).png" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Gâteau Saint-Honoré</h3>
+                        <p class="produto-preco">R$ 23,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Gâteau Saint-Honoré', 23.00)">+ Adicionar</button>
+                        
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="images (10).jpg" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Madeleine</h3>
+                        <p class="produto-preco">R$ 27,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Madeleine', 27.00)">+ Adicionar</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="images (4).jpg" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Saint-Honoré</h3>
+                        <p class="produto-preco">R$ 29,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Saint-Honoré', 29.00)">+ Adicionar</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="images (5).jpg" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Paris-Brest</h3>
+                        <p class="produto-preco">R$ 32,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Paris-Brest', 32.00)">+ Adicionar</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="pexels-photo-33474058.avif" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Crème Brûlée</h3>
+                        <p class="produto-preco">R$ 33,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Crème Brûlée', 33.00)">+ Adicionar</button>
+                    </div>
+                </div>
+                <div class="produto-card" data-categoria="tortas">
+                    <div class="produto-img"> <img src="images (3).jpg" alt=""></div>
+                    <div class="produto-info">
+                        <h3 class="produto-nome">Tarte Tatin</h3>
+                        <p class="produto-preco">R$ 35,00</p>
+                        <button class="btn-add-card" onclick="adicionarAoCarrinho('Tarte Tatin', 27.00)">+ Adicionar</button>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+    </main>
+
+   
+    <footer class="footer">
+        <div class="footer-container">
+            <span class="footer-logo">Fleur de Sucre</span>
+            <p>Haute Pâtisserie Artesanal de inspiração francesa. Criando momentos inesquecíveis através do sabor.</p>
+            <p class="copyright">© 2026 Fleur de Sucre. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+   
+    <div id="loginModal" class="modal-backdrop hidden">
+        <div class="modal-box">
+            <button onclick="closeLoginModal()" class="modal-close">&times;</button>
+            <h3>Acessar Conta</h3>
+            <p>Informe seus dados para entrar.</p>
+            <form onsubmit="handleLoginSubmit(event)">
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" required placeholder="voce@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+   
+    <div id="toast" class="toast">
+        <span id="toastMessage">Ação realizada com sucesso!</span>
+    </div>
+   
+   
+    <script src="script.js"></script>
+</body>
+</html>
